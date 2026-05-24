@@ -1,0 +1,5 @@
+# Delicakious robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://delicakious.ca/sitemap.xml

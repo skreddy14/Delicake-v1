@@ -208,6 +208,56 @@
 }
 </script>
 
+<!-- Structured Data - FAQ Page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How far in advance should I order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend placing orders at least 3-5 days in advance for standard cakes, and 1-2 weeks for wedding or highly customized designs. Last-minute orders (24-48 hours) may be possible depending on availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your cakes really 100% eggless?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, always. Every recipe is developed from scratch to be eggless — we never use egg substitutes or alternatives. Our kitchen is entirely egg-free, so there's no risk of cross-contamination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you deliver? What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer delivery within a 30 km radius of Waterloo, covering Kitchener, Cambridge, Guelph, and surrounding areas. Delivery fees start at $10 depending on distance. Pickup is always free from our Waterloo location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you accommodate allergies (nut-free, dairy-free)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can accommodate most allergies with advance notice. While our kitchen handles nuts and dairy, we take precautions for allergy orders. Please mention any allergies in your order form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I pay? Do you require a deposit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept e-transfer, credit card, and cash. For orders over $100 or wedding cakes, we require a 50% deposit to confirm your booking. Balance is due on pickup or before delivery."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -1291,32 +1341,283 @@
     .wa-float svg { width: 26px; height: 26px; }
   }
 
+  /* ---------- TRUST BADGES ---------- */
+  .trust-badges {
+    padding: 3rem 2.5rem;
+    background: var(--cream-deep);
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .trust-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--berry);
+    margin-bottom: 0.5rem;
+  }
+  .trust-label {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--ink);
+  }
+  .trust-sub {
+    font-size: 0.8125rem;
+    color: var(--cocoa);
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials {
+    padding: 6rem 2.5rem;
+    background: var(--cream);
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .testimonial-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px rgba(42, 24, 16, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(42, 24, 16, 0.1);
+  }
+  .testimonial-card.featured {
+    border: 2px solid var(--berry);
+    background: linear-gradient(135deg, rgba(123, 30, 58, 0.03) 0%, white 100%);
+  }
+  .testimonial-stars {
+    color: var(--gold);
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+  .testimonial-card blockquote {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--cocoa);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-card footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .testimonial-card footer strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .testimonial-card footer span {
+    font-size: 0.8125rem;
+    color: var(--berry);
+  }
+  .testimonial-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  /* ---------- PRICING ---------- */
+  .pricing {
+    padding: 6rem 2.5rem;
+    background: var(--cream-deep);
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .pricing-card {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(42, 24, 16, 0.1);
+  }
+  .pricing-card.featured {
+    background: var(--berry);
+    color: var(--cream);
+  }
+  .pricing-card.featured h3,
+  .pricing-card.featured .price,
+  .pricing-card.featured p,
+  .pricing-card.featured li {
+    color: var(--cream);
+  }
+  .pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.375rem 1rem;
+    border-radius: 999px;
+  }
+  .pricing-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+  }
+  .pricing-card .price {
+    font-size: 0.9375rem;
+    color: var(--cocoa);
+    margin-bottom: 1rem;
+  }
+  .pricing-card .price strong {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--berry);
+  }
+  .pricing-card.featured .price strong {
+    color: var(--butter);
+  }
+  .pricing-card > p {
+    font-size: 0.875rem;
+    color: var(--cocoa);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+  .pricing-card ul {
+    list-style: none;
+    font-size: 0.8125rem;
+  }
+  .pricing-card li {
+    padding: 0.375rem 0;
+    color: var(--cocoa);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .pricing-card li::before {
+    content: '✓';
+    color: var(--pistachio);
+    font-weight: 600;
+  }
+  .pricing-card.featured li::before {
+    color: var(--butter);
+  }
+  .pricing-note {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.875rem;
+    color: var(--cocoa);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    padding: 6rem 2.5rem;
+    background: var(--cream);
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+  .faq-item:hover {
+    box-shadow: 0 4px 16px rgba(42, 24, 16, 0.08);
+  }
+  .faq-item summary {
+    padding: 1.25rem 1.5rem;
+    font-weight: 500;
+    color: var(--ink);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--berry);
+    font-weight: 300;
+    transition: transform 0.3s;
+  }
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+  .faq-item p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--cocoa);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
   /* ---------- FOOTER ---------- */
   footer {
     background: var(--ink);
-    color: var(--cream);
-    padding: 5rem 2.5rem 2rem;
-    position: relative;
-    overflow: hidden;
+    color: var(--cream-deep);
+    padding: 4rem 2.5rem 2rem;
   }
   .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 4rem;
-    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
   }
   .footer-brand h3 {
     font-family: 'Fraunces', serif;
+    font-weight: 500;
     font-style: italic;
-    font-weight: 400;
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: 1.5rem;
+    color: var(--butter);
     margin-bottom: 1rem;
-    line-height: 1;
   }
   .footer-brand p {
-    color: rgba(245,235,220,0.7);
-    max-width: 360px;
     font-size: 0.9375rem;
+    line-height: 1.7;
+    color: rgba(245,235,220,0.75);
   }
   .footer-col h5 {
     font-size: 0.75rem;
@@ -1324,16 +1625,14 @@
     letter-spacing: 0.15em;
     color: var(--butter);
     margin-bottom: 1.25rem;
-    font-weight: 500;
   }
-  .footer-col a,
-  .footer-col p {
+  .footer-col a, .footer-col p {
     display: block;
-    color: rgba(245,235,220,0.7);
-    text-decoration: none;
-    padding: 0.375rem 0;
     font-size: 0.9375rem;
-    transition: color 0.2s;
+    color: rgba(245,235,220,0.75);
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s;
   }
   .footer-col a:hover { color: var(--cream); }
   .footer-bottom {
@@ -1375,6 +1674,14 @@
     .badge-line-1 { font-size: 1.25rem; }
     .badge-line-2 { font-size: 0.6875rem; }
     .badge-line-3 { font-size: 0.8125rem; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonial-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .faq-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .trust-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .pricing-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -1383,11 +1690,11 @@
 <nav>
   <div class="logo">delica<span>kious</span></div>
   <ul class="nav-links">
-    <li><a href="#signatures" data-scroll="signatures">Signatures</a></li>
+    <li><a href="#signatures" data-scroll="signatures">Menu</a></li>
     <li><a href="#gallery" data-scroll="gallery">Gallery</a></li>
-    <li><a href="#about" data-scroll="about">About</a></li>
+    <li><a href="#pricing" data-scroll="pricing">Pricing</a></li>
+    <li><a href="#faq" data-scroll="faq">FAQ</a></li>
     <li><a href="#order" data-scroll="order">Order</a></li>
-    <li><a href="https://www.instagram.com/delicakious" target="_blank" rel="noopener">Instagram ↗</a></li>
   </ul>
   <a class="btn btn-primary nav-mobile" href="#order" data-scroll="order" style="padding: 0.625rem 1.25rem; font-size: 0.75rem;">Order</a>
 </nav>
@@ -1476,6 +1783,51 @@
     </span>
   </div>
 </div>
+
+<!-- ========== TRUST BADGES ========== -->
+<section class="trust-badges">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <span class="trust-label">100% Eggless</span>
+      <span class="trust-sub">Always. No exceptions.</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+      </div>
+      <span class="trust-label">Fresh Baked</span>
+      <span class="trust-sub">Morning of your event</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <span class="trust-label">Local Delivery</span>
+      <span class="trust-sub">Waterloo Region</span>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+      </div>
+      <span class="trust-label">50+ Happy Customers</span>
+      <span class="trust-sub">5-star reviews</span>
+    </div>
+  </div>
+</section>
 
 <!-- ========== SIGNATURES ========== -->
 <section class="signatures" id="signatures">
@@ -1588,6 +1940,75 @@
       <span class="badge-line-1">Eggless</span>
       <span class="badge-line-3">since day one</span>
     </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials" id="testimonials">
+  <div class="section-header">
+    <h2 class="display">What our <em>customers</em> say.</h2>
+    <p>Real reviews from real celebrations. These moments make it all worth it.</p>
+  </div>
+
+  <div class="testimonial-grid">
+    <article class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <blockquote>
+        "The Mango Tres Leches was absolutely divine! My guests couldn't believe it was eggless. Fresh, flavorful, and the presentation was stunning. Already planning our next order!"
+      </blockquote>
+      <footer>
+        <strong>Priya S.</strong>
+        <span>Birthday Party, Waterloo</span>
+      </footer>
+    </article>
+
+    <article class="testimonial-card featured">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <blockquote>
+        "We ordered a custom wedding cake and it exceeded all expectations. The rasmalai flavor was a perfect fusion of cultures for our Indo-Canadian celebration. Everyone asked where we got it!"
+      </blockquote>
+      <footer>
+        <strong>Anita &amp; Michael R.</strong>
+        <span>Wedding, Kitchener</span>
+      </footer>
+    </article>
+
+    <article class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <blockquote>
+        "Finally found a bakery that understands eggless baking! The Chocolate Overload cake was rich, moist, and absolutely delicious. My kids are still talking about it weeks later."
+      </blockquote>
+      <footer>
+        <strong>Deepak M.</strong>
+        <span>Kid's Birthday, Cambridge</span>
+      </footer>
+    </article>
+
+    <article class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 out of 5 stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <blockquote>
+        "The heart pinata cake was the highlight of my proposal! She absolutely loved cracking it open. Thank you for making our special moment even sweeter."
+      </blockquote>
+      <footer>
+        <strong>Rahul K.</strong>
+        <span>Engagement, Waterloo</span>
+      </footer>
+    </article>
+  </div>
+
+  <div class="testimonial-cta">
+    <a href="https://www.google.com/search?q=delicakious+waterloo+reviews" target="_blank" rel="noopener" class="btn btn-ghost">
+      Read more reviews on Google
+      <span class="arrow">→</span>
+    </a>
   </div>
 </section>
 
@@ -1848,6 +2269,116 @@
       Follow @delicakious
       <span class="arrow">↗</span>
     </a>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section class="pricing" id="pricing">
+  <div class="section-header">
+    <h2 class="display">Starting <em>prices</em>.</h2>
+    <p>Every cake is custom, so final pricing depends on size, design complexity, and flavors. Here's a guide to get you started.</p>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Signature Cakes</h3>
+      <div class="price">From <strong>$55</strong></div>
+      <p>Mango Tres Leches, Rasmalai, Chocolate Overload, Ferrero Rocher</p>
+      <ul>
+        <li>Serves 8-10</li>
+        <li>1 kg size</li>
+        <li>Standard decoration</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <h3>Custom Themed</h3>
+      <div class="price">From <strong>$75</strong></div>
+      <p>Photo prints, character themes, custom designs to match your vision</p>
+      <ul>
+        <li>Serves 10-15</li>
+        <li>1-1.5 kg size</li>
+        <li>Custom toppers included</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Wedding Tiers</h3>
+      <div class="price">From <strong>$150</strong></div>
+      <p>Multi-tier cakes with fresh florals, fondant work, and premium finishes</p>
+      <ul>
+        <li>Serves 25+</li>
+        <li>Tasting included</li>
+        <li>Delivery &amp; setup</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Tres Leches Tray</h3>
+      <div class="price">From <strong>$45</strong></div>
+      <p>Our famous three-milk soaked dessert in party-ready trays</p>
+      <ul>
+        <li>Serves 12-15</li>
+        <li>Mango or classic</li>
+        <li>Perfect for sharing</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="pricing-note">
+    Prices are starting points. Final quote provided within 24 hours based on your specific requirements. 
+    <strong>Rush orders (under 48 hours) may incur additional fees.</strong>
+  </p>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq" id="faq">
+  <div class="section-header">
+    <h2 class="display">Common <em>questions</em>.</h2>
+    <p>Everything you need to know before ordering.</p>
+  </div>
+
+  <div class="faq-grid">
+    <details class="faq-item">
+      <summary>How far in advance should I order?</summary>
+      <p>We recommend placing orders at least 3-5 days in advance for standard cakes, and 1-2 weeks for wedding or highly customized designs. Last-minute orders (24-48 hours) may be possible depending on availability — just reach out!</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Are your cakes really 100% eggless?</summary>
+      <p>Yes, always. Every recipe is developed from scratch to be eggless — we never use egg substitutes or "close enough" alternatives. Our kitchen is entirely egg-free, so there's no risk of cross-contamination.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you deliver? What areas do you serve?</summary>
+      <p>We offer delivery within a 30 km radius of Waterloo, covering Kitchener, Cambridge, Guelph, and surrounding areas. Delivery fees start at $10 depending on distance. Pickup is always free from our Waterloo location.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can you accommodate allergies (nut-free, dairy-free)?</summary>
+      <p>We can accommodate most allergies with advance notice. While our kitchen handles nuts and dairy, we take precautions for allergy orders. Please mention any allergies in your order form and we'll discuss options.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I pay? Do you require a deposit?</summary>
+      <p>We accept e-transfer, credit card, and cash. For orders over $100 or wedding cakes, we require a 50% deposit to confirm your booking. Balance is due on pickup or before delivery.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Can I request a tasting before ordering a wedding cake?</summary>
+      <p>Absolutely! We offer tasting sessions for wedding orders by appointment. You'll get to sample 3-4 flavors of your choice. Tasting fee is $25, which is credited toward your final order.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What's your cancellation policy?</summary>
+      <p>Cancellations made 72+ hours before your event receive a full refund of any deposit. Within 72 hours, deposits are non-refundable but can be credited toward a future order within 3 months.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you make vegan cakes?</summary>
+      <p>Currently, our cakes contain dairy (milk, butter, cream). We're working on vegan options — follow us on Instagram for updates! All our cakes are vegetarian and eggless.</p>
+    </details>
   </div>
 </section>
 

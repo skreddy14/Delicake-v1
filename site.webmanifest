@@ -1,0 +1,12 @@
+{
+  "name": "Delicakious",
+  "short_name": "Delicakious",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5EBDC",
+  "theme_color": "#7B1E3A",
+  "icons": [
+    { "src": "/images/Delicakious-logo-main.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/Delicakious-logo-main.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,9 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://delicakious.ca/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    
+    <!-- Featured Images for Image Search -->
+    <image:image>
+      <image:loc>https://delicakious.ca/images/mango-tres-leches.jpg</image:loc>
+      <image:title>Mango Tres Leches Cake - Delicakious Waterloo</image:title>
+      <image:caption>Light sponge soaked in three milks, layered with fresh Alphonso mango and whipped cream</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/rasmalai-cake.jpg</image:loc>
+      <image:title>Rasmalai Cake - Indian Fusion Dessert Waterloo</image:title>
+      <image:caption>Cardamom-infused sponge bathed in saffron milk, finished with pistachios and rose petals</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/floral-wedding-cake.jpg</image:loc>
+      <image:title>Custom Wedding Cake - Delicakious Waterloo Ontario</image:title>
+      <image:caption>Elegant pink floral wedding cake with hand-piped buttercream flowers</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/chocolate-overload-cake.jpg</image:loc>
+      <image:title>Chocolate Overload Cake - Eggless Chocolate Cake Waterloo</image:title>
+      <image:caption>Triple-chocolate indulgence with rich ganache, brownie bites, and hazelnut praline</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/ferrero-rocher-cake.jpg</image:loc>
+      <image:title>Ferrero Rocher Cake - Premium Chocolate Cake Ontario</image:title>
+      <image:caption>Luxurious Ferrero Rocher cake with hazelnut and chocolate layers</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/wedding-cake.jpg</image:loc>
+      <image:title>Two-Tier Wedding Cake - Custom Wedding Cakes Kitchener Waterloo</image:title>
+      <image:caption>Elegant two-tier wedding cake with roses for special celebrations</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/unicorn-cake.jpg</image:loc>
+      <image:title>Unicorn Birthday Cake - Kids Cakes Waterloo</image:title>
+      <image:caption>Magical unicorn themed birthday cake for children's parties</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/disney-princess-cake.jpg</image:loc>
+      <image:title>Disney Princess Cake - Character Cakes Waterloo Ontario</image:title>
+      <image:caption>Disney princess themed birthday cake for children</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/heart-piniata-nutella-cake.jpg</image:loc>
+      <image:title>Heart Pinata Cake with Nutella - Unique Cakes Waterloo</image:title>
+      <image:caption>Heart-shaped pinata cake filled with Nutella and chocolates</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/red-velvet.jpg</image:loc>
+      <image:title>Red Velvet Cake - Eggless Red Velvet Waterloo</image:title>
+      <image:caption>Classic red velvet cake with cream cheese frosting</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/Delicakious-logo-main.png</image:loc>
+      <image:title>Delicakious Bakery Logo</image:title>
+      <image:caption>Delicakious - Eggless Cakes and Custom Cakes in Waterloo Ontario</image:caption>
+    </image:image>
   </url>
 </urlset>

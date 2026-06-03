@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://delicakious.ca/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Featured Images for Image Search -->
+    <image:image>
+      <image:loc>https://delicakious.ca/images/mango-tres-leches.jpg</image:loc>
+      <image:title>Mango Tres Leches Cake - Delicakious Waterloo</image:title>
+      <image:caption>Light sponge soaked in three milks, layered with fresh Alphonso mango and whipped cream</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/rasmalai-cake.jpg</image:loc>
+      <image:title>Rasmalai Cake - Indian Fusion Dessert Waterloo</image:title>
+      <image:caption>Cardamom-infused sponge bathed in saffron milk, finished with pistachios and rose petals</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://delicakious.ca/images/floral-wedding-cake.jpg</image:loc>
+      <image:title>Custom Wedding Cake - Delicakious Waterloo Ontario</image:title>
+      <image:caption>Elegant pink floral wedding cake with hand-piped buttercream flowers</image:caption>
+    </image:image>
+  </url>
+</urlset>

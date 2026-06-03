@@ -1,0 +1,33 @@
+# Delicakious robots.txt
+# https://delicakious.ca
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+
+# Allow all images
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://delicakious.ca/sitemap.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

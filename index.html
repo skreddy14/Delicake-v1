@@ -3048,4 +3048,97 @@
     }
   });
 
-  // ===== HA
+  // ===== HAMBURGER MENU =====
+const hamburger = document.getElementById('nav-hamburger');
+  const drawer = document.getElementById('nav-drawer');
+
+  function openDrawer() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    drawer.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // Move focus into drawer
+    const firstLink = drawer.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    drawer.classList.remove('open');
+    document.body.style.overflow = '';
+    hamburger.focus();
+  }
+
+  hamburger.addEventListener('click', () => {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+
+  // Close drawer when a link is tapped
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      closeDrawer();
+      const targetId = link.getAttribute('data-scroll');
+      if (targetId) {
+        e.preventDefault();
+        const target = document.getElementById(targetId);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+  });
+
+  // ===== LIGHTBOX FOCUS TRAP =====
+  const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+  function trapFocus(e) {
+    if (!lightbox.classList.contains('active')) return;
+    const focusable = Array.from(lightbox.querySelectorAll(focusableSelectors));
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+  }
+  document.addEventListener('keydown', trapFocus);
+
+  // Focus close button when lightbox opens (patch openLightbox)
+  const _origOpenLightbox = openLightbox;
+  function openLightboxFocused(list, startIndex) {
+    _origOpenLightbox(list, startIndex);
+    setTimeout(() => lightboxClose.focus(), 50);
+  }
+  // Re-bind gallery click handlers to use focused version
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const list = buildGalleryList();
+      const idx = list.findIndex(x => x.element === item);
+      if (idx >= 0) openLightboxFocused(list, idx);
+    });
+  });
+
+  const reveal = (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  };
+  const observer = new IntersectionObserver(reveal, { threshold: 0.1 });
+  document.querySelectorAll('.signature-card, .occasion, .section-header, .about-text > *, .about-visual').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = `opacity 0.7s ease ${i * 0.05}s, transform 0.7s ease ${i * 0.05}s`;
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
